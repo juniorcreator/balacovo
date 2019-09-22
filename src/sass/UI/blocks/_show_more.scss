@@ -1,0 +1,23 @@
+.show-more {
+  text-align: center;
+  width: 100%;
+  margin-top: 58px;
+  &__text {
+    font-family: "Roboto-Light";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    color: #757575;
+    margin-bottom: 20px;
+  }
+  .btn {
+
+  }
+  @include sm_769{
+    margin-top: 32px;
+  }
+  @include xs_540{
+    margin-top: 22px;
+  }
+}

@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Catalog</title>
+  <link rel="stylesheet" href="src/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+<div class="main-wrapper page-catalog">
+  <header class="header">
+    <div class="header__wrap content">
+      <div class="header__top">
+        <div class="header__logo">
+          <a href="">
+            <img src="src/img/logo.png" alt="logo">
+          </a>
+        </div>
+        <nav class="header__nav nav">
+          <img src="src/img/menu.png" alt="menu" class="nav__mobile jsn-nav__mobile">
+          <ul class="nav__list">
+            <img src="src/img/close.svg" class="nav__close js-nav__close" alt="close">
+            <li class="nav__item active">
+              <a href="">
+                Каталог
+              </a>
+            </li><li class="nav__item">
+            <a href="">
+              Где купить
+            </a>
+          </li><li class="nav__item">
+            <a href="">
+              О компании
+            </a>
+          </li><li class="nav__item">
+            <a href="">
+              Партнерам
+            </a>
+          </li>
+          </ul>
+        </nav>
+        <div class="header__phone phone">
+          <div>
+            8 (800) 555-25-40
+          </div>
+          <span>звонок бесплатный</span>
+        </div>
+      </div>
+      <div class="header__bottom">
+        <div class="header__search search">
+          <form class="search__form" action="">
+            <input type="text"
+                   class="search__input"
+                   placeholder="Что ищем...">
+            <button type="submit" class="search__btn btn btn-search">
+              Найти
+            </button>
+          </form>
+        </div>
+        <div class="header__links">
+          <button type="submit" class="btn btn-links">
+            Оптовый прайс
+          </button>
+          <button type="submit" class="btn btn-links">
+            Стать партнером
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="s-catalog">
+    <div class="layer"></div>
+    <div class="content">
+      <ul class="breadcrumbs">
+        <li>
+          <a href="">Главная</a>
+        </li>
+        <li>
+          <a>Каталог</a>
+        </li>
+      </ul>
+      <h3 class="s-heading s-heading-filter">
+        Товары
+        <div class="filter-wrap">
+          <div class="filters-dropdown js-filters-dropdown">
+            Фильтры
+            <img src="src/img/sort-by.png"/>
+          </div>
+          <div class="sort-by">
+            <div class="sort-by__title">Сортировать по
+              <img src="src/img/sort-by.png">
+            </div>
+            <input type='hidden' name="sort-by">
+            <ul class="sort-by__list">
+              <li class="sort-by__item active">
+                Сначала популярное
+              </li>
+              <li class="sort-by__item">
+                Сначала дешевле
+              </li>
+              <li class="sort-by__item">
+                Сначала дороже
+              </li>
+              <div class="sort-by__triangle"></div>
+            </ul>
+          </div>
+        </div>
+      </h3>
+      <div class="s-catalog__wrap">
+        <div class="s-catalog__filters">
+          <div  class="filter">
+            <div class="filter__wrap">
+              <p class="filter__title">
+                Категория
+                <span>&#8249;</span>
+              </p>
+              <form id="f-category" class="filter__form" action="">
+                <label class="filter__container">Бархотка
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Башмаки натяжителя
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Брызговики
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Втулки подвески
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Домкрат
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Иномарки
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Автомобильные ковры
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Крепления глушителя
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Втулки подвески1
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Домкрат1
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Иномарки1
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Автомобильные ковры1
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">Крепления глушителя1
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div  class="filter filter--cars">
+            <div class="filter__wrap">
+              <p class="filter__title">
+                Автомобиль
+                <span>&#8249;</span>
+              </p>
+              <form id="f-car" class="filter__form" action="">
+                <label class="filter__container">Chevrolet Niva 2123 (2)
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">LADA VESTA (1)
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 2107-07 (7)
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 1117/1118/1119... (8)
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 2108-99 (3)
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 2110-12 (1)
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 1117/1118/1119... (8)
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 2108-99 (3)
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">ВАЗ 2110-12 (1)
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="filter filter--material">
+            <div class="filter__wrap">
+              <p class="filter__title">
+                Материал
+                <span>&#8249;</span>
+              </p>
+              <form id="f-material" class="filter__form" action="">
+                <label class="filter__container">Резина
+                  <input type="checkbox">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+                <label class="filter__container">FPM ФТОР
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark filter__checkmark"></span>
+                </label>
+              </form>
+            </div>
+          </div>
+          <div class="reset-filter js-reset-filter">
+            Сбросить фильтр
+          </div>
+          <button class="btn btn--accept">
+            Применить
+          </button>
+          <img src="src/img/close.svg" alt="close"
+               class="s-catalog__close js-catalog__close">
+        </div>
+        <div class="s-catalog__goods product-wrap">
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.6.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.7.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.8.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.9.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.6.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.7.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.8.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.9.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.6.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.7.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.8.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.9.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.6.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.7.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.8.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.9.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.6.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.7.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.8.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.9.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.6.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.7.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.8.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="src/img/catalog/image2.9.png" alt="product">
+            </div>
+            <div class="product__content">
+              <p class="product__title">
+                Опора карданного вала 2101/2102/2103 fwfwf wfwfwf wf
+              </p>
+              <a href="" class="btn btn--product">Подробнее</a>
+            </div>
+          </div>
+          <div class="show-more">
+            <p class="show-more__text">
+              Вы просмотрели 12 из 1 579 товаров
+            </p>
+            <button class="btn btn--more js-btn--more">
+              Показать еще
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__wrap content">
+      <a href="" class="footer__logo">
+        <img src="src/img/f_logo.png" alt="">
+      </a>
+        <div class="footer__order-call order-call js-order-call">
+          <div class="order-call__wrap">
+            <p>ЗАКАЗАТЬ ЗВОНОК</p>
+            <p>8 (800) 555-25-40</p>
+          </div>
+        </div>
+      <ul class="footer__nav">
+         <li class="footer__items">
+           <a href="#">Главная</a>
+         </li>
+        <li class="footer__items">
+          <a href="#">Каталог</a>
+        </li>
+        <li class="footer__items">
+          <a href="#">Где купить</a>
+        </li>
+        <li class="footer__items">
+          <a href="#">Партнерам</a>
+        </li>
+        <li class="footer__items">
+          <a href="#">Гарантия и возврат</a>
+        </li>
+        <li class="footer__items">
+          <a href="#">О компании</a>
+        </li>
+        <li class="footer__items">
+          <a href="#">Новости</a>
+        </li>
+        <li class="footer__items">
+          <a href="#">Контакты</a>
+        </li>
+      </ul>
+      <div class="footer__copy">
+        &copy;2019 <a href="#">БАЛАКОВО ЗАПЧАСТЬ</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<div class="order-call-popup">
+  <div class="order-call-popup__wrap">
+    <img src="src/img/close.svg" class="order-call-popup__close js-close" />
+    <h4 class="order-call-popup__title">Заказать звонок</h4>
+    <form action="#" class="order-call-popup__form">
+      <input placeholder="Ваше имя" type="text" name="name" minlength="4" required>
+      <input placeholder="Номер телефона" type="tel" name="phone"  required>
+      <label class="container order-call-popup__label">Я принимаю <u>Условия использования
+      </u> и соглашаюсь с <u>политикой конфиденциальности</u>
+        <input type="checkbox" name="confirm" required>
+        <span class="checkmark order-call-popup__checkmark"></span>
+      </label>
+      <button type="submit" class="btn btn--order">
+        Заказать звонок
+      </button>
+    </form>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="src/vendor/jquery-3.3.1.min.js"></script>
+<script src="src/vendor/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="src/js/main_js/main.js"></script>
+</body>

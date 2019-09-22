@@ -1,0 +1,49 @@
+.search {
+  &__form {
+    display: flex;
+    align-items: center;
+  }
+  &__input {
+    max-width: 461px;
+    width: 100%;
+    margin-right: 10px;
+    padding: 13px 15px 12px 14px;
+    text-align: left;
+    background-color: #fff;
+    color: #757575;
+    font-family: "Montserrat-ExtraLight";
+    font-weight: 200;
+    outline: none;
+    font-style: normal;
+    border: 2px solid #757575;
+    border-radius: 35px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  &__btn {
+
+  }
+  @include md_1190{
+    &__input {
+      max-width: 398px;
+      padding: 10px 15px 10px 14px;
+    }
+  }
+  @include sm_769{
+    &__input {
+      padding: 11px 35px 11px 14px;
+      margin-right: -30px;
+      border-width: 1px;
+    }
+  }
+  @include sm_690{
+    &__input{
+      max-width: 100%;
+      padding: 8px 35px 8px 14px;
+      height: 35px;
+    }
+    &__form {
+      margin-bottom: 23px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.phone {
+  text-align: right;
+  color: #757575;
+  div {
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: left;
+  }
+  span {
+    font-family: "Roboto-Thin.ttf";
+    font-size: 14px;
+  }
+  @include md_960{
+    div {
+      font-size: 16px;
+    }
+  }
+}

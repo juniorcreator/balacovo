@@ -1,0 +1,104 @@
+.s-catalog {
+  padding-top: 27px;
+  padding-bottom: 96px;
+  position: relative;
+  &__wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+  }
+  &__close {
+    display: none;
+  }
+  .layer {
+    position: absolute;
+    height: 100%;
+    width: 100vw;
+    transition: opacity .3s;
+    margin: -27px -20px -27px -20px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -9;
+    opacity: 0;
+    display: none;
+    &.active {
+      z-index: 9;
+      display: block;
+      opacity: 1;
+    }
+  }
+  &__filters {
+    max-width: 264px;
+    width: 100%;
+    margin-right: 23px;
+    position: relative;
+  }
+  @include md_1190{
+    &__filters {
+      max-width: 220px;
+      margin-right: 10px;
+    }
+  }
+  @include md_960{
+    &__filters {
+      max-width: 200px;
+    }
+  }
+  @include sm_769{
+    padding-bottom: 73px;
+    &__filters {
+      max-width: 264px;
+      position: absolute;
+      z-index: 9;
+      top: -20px;
+      transition: opacity .3s;
+      opacity: 0;
+      visibility: hidden;
+      &.active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    .filter-wrap {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 30px;
+    }
+    .layer {
+      //display: block;
+    }
+  }
+  @include sm_690{
+    .filter-wrap {
+      align-items: center;
+    }
+    .layer{
+      margin: -27px -10px -27px -10px;
+    }
+  }
+  @include xs_540{
+    padding-bottom: 51px;
+    &__close {
+      display: inline-block;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      user-select: none;
+    }
+    &__filters {
+      &.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        max-width: initial;
+        height: 100vh;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding-top: 40px;
+      }
+    }
+  }
+}

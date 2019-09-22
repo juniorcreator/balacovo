@@ -1,0 +1,38 @@
+.filters-dropdown {
+  display: none;
+  font-family: "Roboto-Regular";
+  font-size: 12px;
+  line-height: 14px;
+  color: #757575;
+  background-color: transparent;
+  border: 1px solid #757575;
+  box-sizing: border-box;
+  border-radius: 35px;
+  padding: 12px 20px 13px 20px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 357px;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  &.active {
+    background-color: #fff;
+    color: #222C35;
+    z-index: 9;
+    img {
+      transform: rotateX(180deg);
+    }
+  }
+  img {
+    transition: transform .3s;
+    user-select: none;
+    margin-left: 7px;
+  }
+  @include sm_769{
+    display: flex;
+    margin-right: 15px;
+  }
+  @include xs_540{
+    padding: 10px 16px 10px 12px;
+  }
+}

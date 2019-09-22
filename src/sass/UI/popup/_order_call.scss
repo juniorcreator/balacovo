@@ -1,0 +1,132 @@
+.order-call-popup{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -9;
+  transition: opacity.3s;
+  &.open {
+    z-index: 999;
+    opacity: 1;
+    visibility: visible;
+  }
+  &__wrap {
+    position: absolute;
+    left: 50%;
+    padding: 59px 64px 67px 64px;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 394px;
+    width: 100%;
+    background-color: #fff;
+  }
+  input {
+    display: block;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    width: 100%;
+    outline: none;
+    font-family: "Roboto-Regular";
+    border: none;
+    border-bottom: 1px solid rgba(117,117,117,.3);
+    font-size: 14px;
+    line-height: 16px;
+    color: #757575;
+  }
+  input[type='checkbox'] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  input[type='checkbox']:checked ~ .order-call-popup__checkmark:after {
+    display: block;
+  }
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: -1px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-family: "Roboto-Bold";
+    color: #818181;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &__title {
+    text-align: center;
+    font-family: "Roboto-Bold";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+    color: #222C35;
+    margin-bottom: 45px;
+  }
+  &__form {
+    text-align: center;
+  }
+  &__label {
+    position: relative;
+    user-select: none;
+    padding-left: 28px;
+    margin: 30px 0 51px 15px;
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+    text-align: left;
+    font-family: "Roboto-Regular";
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    color: #222C35;
+    &:hover input[type='checkbox'] ~
+    .order-call-popup__checkmark {
+
+    }
+  }
+  &__checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 1px;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 8px;
+      top: 3px;
+      width: 4px;
+      height: 8px;
+      border: solid #752023;
+      border-width: 0 1.5px 1.5px 0;
+      transform: rotate(45deg);
+      color: #752023;
+    }
+  }
+  .btn {
+
+  }
+  @include xs_540{
+    &__wrap {
+      max-width: 90%;
+      padding: 59px 15px 67px 15px;
+    }
+    &__label {
+      margin: 30px 0 30px 0px;
+    }
+  }
+}

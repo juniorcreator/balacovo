@@ -1,0 +1,40 @@
+.breadcrumbs {
+  display: inline-block;
+  margin-bottom: 20px;
+  li {
+    position: relative;
+    display: inline-block;
+    margin-right: 38px;
+    font-family: "Roboto-Regular";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 14px;
+    a {
+      color: #A2A8C0;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      right: -23.5px;
+      top: 1px;
+      height: 100%;
+      width: 4.5px;
+      background-image: url('../img/Vector.png');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    &:last-child {
+      margin-right: 0;
+      a {
+        color: #222C35;
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+  @include sm_769{
+    display: none;
+  }
+}
